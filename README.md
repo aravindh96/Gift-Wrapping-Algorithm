@@ -1,26 +1,36 @@
-# Kirkpatrick's Point Location
-An interactive implementation of Kirkpatrick's point location algorithm for COS 451 (Computational Geometry). View the program at http://rkaneriya.github.io/point-location. 
+# Gift Wrapping Algorithm
+Computational Geometry Project
+-Aravindh Shanmuganathan
+ID: 467481
 
---- 
+Gift Wrapping Algorithm:
+
+The gift wrapping algorithm can be used to find the convex hull of a set of points in a plane. This has a wide range of applications in the field of computational geometry such as collision detection, triangulation , etc. The gift wrapping algorithm has a run time of O〖(n〗^2).
+But if we know the number of output points on the convex hull then this is a output sensitive algorithm with a runtime of O(n*h) where h is the number of points on the convex hull.
+
+The Visualization shows the formation of the convex hull in which each step  shows the formation of a single side of the convex edge. The red lines indicate the line between the set of 3 points (p,q,r) for which the orient is calculated.
+
+ Pseudocode:
+	Given a set S of n points in a plane:
+	Initialize set Convex_Hull.
+	Find the leftmost point (left_point) in the set 
+	ConvexHull.add(left_point)
+	Do while the first point is not revisited:
+	For each point loop through every other point:
+	Find a point for which Orient(p,q,r) is always negative, i.e. counter clockwise.
+	p = q
+
+
+
 
 ## Instructions
 
-1) Click within the bounding triangle to create a simple polygon. Select "Close Polygon" when finished. 
+1) Click to select points inside box, then click Gift wrap button. 
 
-2) Select "Triangulate" to triangulate the polygon as well as the region outside the polygon but inside the bounding triangle. 
+2) Press on 'Step' button to step through the algorithm along each of the convex hull sides.
 
-3) Select "Find Independent Set" to highlight a set of vertices in the resulting graph. 
-
-4) Select "Remove Set & Re-Triangulate" to remove the highlighted points and re-triangulate the "holes" left by their removal. 
-
-5) Repeat steps 2 & 3 until the coarsest triangulation (the bounding triangle) is reached. 
-
-6) Select a "query point" inside one of the faces of the base triangulation. 
-
-7) Repeatedly select "Step" to view each level of triangulation with the triangle containing the query point highlighted in yellow. 
+3) Select 'Reset' button to restart the algorithm.,
 
 ## Implementation
-
-O(n) space complexity and O(n^2) time complexity for pre-processing the planar graph. O(log n) for point location queries. 
-
-I used the following module for triangulation: https://github.com/mapbox/earcut (uses the ear-clipping algorithm for O(n^2) triangulation).   
+I used the d3.js library for drawing shapes. I modified the implementation of Kirkpatricks algorithm. To girt wrapping from this repository: https://github.com/rkaneriya/point-location
+  
