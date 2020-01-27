@@ -32,5 +32,5 @@ The Visualization shows the formation of the convex hull in which each step  sho
 3) Select 'Reset' button to restart the algorithm.,
 
 ## Implementation
-I used the d3.js library for drawing shapes. I modified the implementation of Kirkpatricks algorithm. To girt wrapping from this repository: https://github.com/rkaneriya/point-location
+I used the d3.js library for drawing shapes. I modified the implementation of Kirkpatricks algorithm to gift wrapping from this repository: https://github.com/rkaneriya/point-location
   
