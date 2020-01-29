@@ -25,6 +25,8 @@ The Visualization shows the formation of the convex hull in which each step  sho
 
 ## Instructions
 
+Project Link : https://aravindh96.github.io/comp_geo/index.html
+
 1) Click to select points inside box, then click Gift wrap button. 
 
 2) Press on 'Step' button to step through the algorithm along each of the convex hull sides.
